@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-4">
+    <img class="img-fluid" 
+    [src] ='film.img' 
+    [alt]='film.name' 
+    style="max-height: 150px;">
+  </div>
+  <h3 class="col-8"> Titre du film : {{film.name}}</h3>
+</div>
+<hr>
+<div class="row">
+  <p class="col-12"><strong>Synopsis :</strong>  {{film.desc}}</p>
+  <p class="col-12"><strong>Type de film :</strong>  {{film.genre}}</p>
+  <p class="col-12"><strong>Année de sortie :</strong>  {{film.year}}</p>
+  <p class="col-12"><strong>Prix :</strong>  {{film.price}} FCFA</p>
+</div>
+<hr>
+<div class="row">
+  <ul class="list-group col-12">
+    <li class="list-group-item list-group-item-action"
+      *ngFor="let fichetechnique of film.fichetechnique"> 
+      <strong>Réalisateur :</strong> {{fichetechnique.realisateur}},
+      <span class="badge badge-default badge-pill ml-auto">
+        <strong>Durée :</strong> {{fichetechnique.duree}},
+      </span>
+      <span class="badge badge-default badge-pill ml-auto">
+          <strong>Acteurs :</strong> {{fichetechnique.acteur}}
+        </span>
+    </li>
+</ul>
+</div>
+<hr>
+<div class="row">
+  <button class="btn btn-success">Editer un film</button>
+  <button class="btn btn-secondary ml-auto">Ajoutez au panier</button>
+</div>

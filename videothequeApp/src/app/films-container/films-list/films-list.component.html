@@ -1,0 +1,17 @@
+<div class="row ml-auto">
+  <h3>Liste des films disponibles</h3>
+  <div class="list-group" col-12>
+    <a
+    (click)= "pickFilm(index)"
+    [appActive]="index === activeFilm"
+     *ngFor = "let film of films; let index = index" 
+    href="#" class="list-group-item list-group-item-action">{{film.name}}</a>
+  </div>
+</div>
+<hr>
+<div class="row" style="margin-left: 10%;">
+</div>
+<hr>
+<div class="row" style="margin-left: 10%;">
+  <button class="btn btn-success">Ajouter un film</button>
+</div>
